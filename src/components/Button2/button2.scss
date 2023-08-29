@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.button2 {
+  background-color: $transparent;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: 2px solid $white;
+  color: $white;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}

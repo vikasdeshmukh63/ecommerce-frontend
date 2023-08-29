@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+#sm-banner {
+  @include flex(space-between, row, 0);
+  flex-wrap: wrap;
+
+  .text-banners {
+    width: 100%;
+    @include flex(space-between, row, 0);
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+}

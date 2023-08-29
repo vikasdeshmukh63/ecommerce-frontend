@@ -1,0 +1,62 @@
+@import "../../index.scss";
+
+#filter {
+    border-bottom: 1px solid $gray;
+    @include flexBox(center,flex-start,row,0);
+
+    >button {
+        background-color: $transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        >svg {
+            font-size: 30px;
+            transition: 0.5s;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+
+.filterType {
+    color: $text-color1;
+    font-size: 18px;
+    transition: 0.5s;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.filterItem {
+    @include flex(center, row, 10px);
+
+    >input[type="checkbox"] {
+        accent-color: $secondary;
+        width: 15px;
+        height: 15px;
+    }
+
+    >label {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.filterBox{
+   width: 500px;
+   position: "relative";
+   padding-top: 50px;
+}
+
+.cancelButton{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+}

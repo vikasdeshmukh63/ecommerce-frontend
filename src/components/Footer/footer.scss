@@ -1,0 +1,76 @@
+@import "../../index.scss";
+
+#footer {
+  @include flexBetweenStart(row);
+  flex-wrap: wrap;
+
+  .col {
+    @include flexAlignStart(column);
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    > h4 {
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+
+    > p {
+      font-size: 13px;
+      margin: 0 0 8px 0;
+    }
+
+    > a {
+      font-size: 13px;
+      text-decoration: none;
+      color: $text-color1;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .follow {
+      margin-top: 20px;
+
+      .icon {
+        > svg {
+          color: $grayish;
+          padding-right: 4px;
+          cursor: pointer;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+
+  .install {
+    .row {
+      @include flex(center, row, 10px);
+      > img {
+        border: 1px solid $secondary;
+        border-radius: 6px;
+        margin: 10px 0 15px 0;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 799px){
+  #footer{
+
+    .col{
+      padding-bottom: 20px;
+    }
+  }
+}

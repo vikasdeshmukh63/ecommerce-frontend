@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+#newsletter {
+  @include flex(space-between, row, 0);
+  flex-wrap: wrap;
+  background-image: url("../../assets/banner/b14.png");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: $bluish;
+
+  .newstext {
+    > h4 {
+      font-size: 22px;
+      font-weight: 700;
+      color: $white;
+    }
+
+    > p {
+      font-size: 14px;
+      font-weight: 600;
+      color: $grayish;
+
+      > span {
+        color: $gold;
+      }
+    }
+  }
+
+  > form {
+    @include flex(center, row, 0);
+
+    > input {
+      height: 3.125rem;
+      padding: 0 1.25em;
+      font-size: 14px;
+      width: 100%;
+      border: 1px solid $transparent;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      font-size: 18px;
+    }
+
+    > button {
+      @include flex(center, row, 0);
+      border-radius: 0 4px 4px 0;
+      height: 3.125rem;
+      width: 40%;
+      padding: 0 20px;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      font-weight: 600;
+      color: $white;
+      white-space: nowrap;
+      background-color: $secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 799px){
+  #newsletter {
+    >form{
+      width: 70%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 477px){
+  #newsletter {
+    padding: 40px 20px;
+    >form{
+      width: 100%;
+    }
+  }
+}

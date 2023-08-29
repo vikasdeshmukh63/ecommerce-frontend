@@ -1,0 +1,52 @@
+// mixins
+@mixin flex($justify, $direction, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin flexBox($align,$justify,$direction,$gap){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap:$gap;
+}
+
+@mixin flexAlignStart($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flexAlignEnd($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: $direction;
+}
+
+@mixin flexBetweenStart($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  direction: $direction;
+}
+
+// variables
+$primary: #e3e6f3;
+$secondary: #088178;
+$tertiary: #cce7d0;
+$gray: #606063;
+$grayish: #818ea0;
+$red: #ef3636;
+$red-fade: #ec544e;
+$white: white;
+$quaternary: #e8f6ea;
+$bluish: #041e42;
+$text-color1: #1a1a1a;
+$gold: #ffbd27;
+$transparent: transparent;

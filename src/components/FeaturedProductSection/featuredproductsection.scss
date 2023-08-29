@@ -1,0 +1,37 @@
+@import "../../index.scss";
+
+#featuredProductSection {
+  text-align: center;
+
+  .pro-container {
+    @include flex(space-between, row, 0);
+    flex-wrap: wrap;
+    padding-top: 20px;
+
+    .product-card {
+      margin: 15px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  #featuredProductSection {
+    .pro-container {
+      justify-content: center;
+
+      .product-card {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  #featuredProductSection {
+    .pro-container {
+      .product-card {
+        width: 100%;
+      }
+    }
+  }
+}

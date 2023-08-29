@@ -1,0 +1,36 @@
+@import "../../index.scss";
+
+.text-banner-box {
+  @include flexAlignStart(column);
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  > h2 {
+    color: $white;
+    font-weight: 900;
+    font-size: 22px;
+  }
+
+  > h3 {
+    color: $red-fade;
+    font-weight: 800;
+    font-size: 15px;
+  }
+}
+
+//media query
+@media only screen and (max-width: 799px) {
+  .text-banner-box {
+    width: 28%;
+  }
+}
+
+@media only screen and (max-width: 477px){
+.text-banner-box{
+  width: 100%;
+}
+}

@@ -1,0 +1,161 @@
+@import "../../index.scss";
+
+header {
+  @include flex(space-between, row, 0);
+  padding: 20px 80px;
+  background-color: $primary;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .navbar {
+    @include flex(center, row, center);
+    transition: 0.3s;
+
+    .closeIcon {
+      display: none;
+
+      > svg {
+        font-size: 30px;
+      }
+    }
+
+    > li {
+      list-style: none;
+      padding: 0 20px;
+
+      //active class for highlighting active links
+      .active {
+        color: $secondary;
+        position: relative;
+
+        //for half underline design
+        &::after {
+          content: "";
+          width: 50%;
+          height: 2px;
+          background-color: $secondary;
+          position: absolute;
+          bottom: -4px;
+          left: 0px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-color1;
+        transition: 0.3s ease;
+        position: relative;
+        display: grid;
+        place-items: center;
+
+        //for hover effect
+        &:hover {
+          color: $secondary;
+        }
+
+        //for hover effect along with half underline
+        &:hover::after {
+          content: "";
+          width: 50%;
+          height: 2px;
+          background-color: $secondary;
+          position: absolute;
+          bottom: -4px;
+          left: 0px;
+        }
+      }
+
+      > svg {
+        font-size: 30px;
+        transition: 0.3s;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      .profile,
+      .cart {
+        &:hover::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    > svg {
+      font-size: 40px;
+      transition: 0.3s;
+      color: $text-color1;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    > a {
+      position: relative;
+
+      > svg {
+        font-size: 40px;
+        transition: 0.3s;
+        color: $text-color1;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+// media query
+@media only screen and (max-width: 799px) {
+  header {
+    .hamburger {
+      @include flex(center, row, 20px);
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: $primary;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 80px 0 0 10px;
+      z-index: 999;
+
+      > li {
+        margin-bottom: 25px;
+      }
+
+      .closeIcon {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+    }
+  }
+}
+
+// media query 
+@media only screen and (max-width: 477px) {
+  header {
+    padding: 10px 30px;
+  }
+}
