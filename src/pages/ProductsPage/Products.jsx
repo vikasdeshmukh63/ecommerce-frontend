@@ -18,6 +18,7 @@ import img15 from "../../assets/products/n7.jpg"
 import img16 from "../../assets/products/n8.jpg"
 import Pagination from "../../components/Pagination/Pagination"
 import NewsLetter from "../../components/NewsLetter/NewsLetter"
+import heroBanner from "../../assets/banner/b1.jpg"
 
 
 
@@ -155,7 +156,7 @@ const products = [
 const Products = () => {
   return (
     <section className="products-page">
-      <ProductsHeroSection/>
+      <ProductsHeroSection bannerImg={heroBanner} heading={"#stayhome"} subtitle={"Save more with coupons & up to 70% off!"}/>
       <FeaturedProductSection products={products} title={"Featured Products"} des={"Summer Collection New Modern Design"}/>
       <Pagination/>
       <NewsLetter/>

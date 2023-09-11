@@ -1,0 +1,85 @@
+@import "../../index.scss";
+
+.blog-box {
+  padding: 150px 150px 0 150px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  .blog-img {
+    width: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+
+    > img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+  .blog-details {
+    width: 50%;
+
+    > a {
+      text-decoration: none;
+      font-size: 11px;
+      color: $text-color1;
+      font-weight: 700;
+      position: relative;
+      transition: 0.3s;
+
+      &::after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: $text-color1;
+        position: absolute;
+        top: 6px;
+        right: -60px;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        color: $secondary;
+
+        &::after {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+
+  > h1 {
+    position: absolute;
+    top: 110px;
+    left: 150px;
+    font-size: 70px;
+    font-weight: 700;
+    color: $grayish2;
+    z-index: -9;
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  .blog-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 20px 0 20px;
+    gap: 30px;
+
+    .blog-img {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .blog-details {
+      width: 100%;
+    }
+
+    >h1{
+        top:60px;
+        left: 15px;
+    }
+  }
+}
