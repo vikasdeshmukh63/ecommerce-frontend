@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const handleImgChange = (e) => {
     // storing the previous img in nativeImg variable 
     const nativeImg = e.target.src;
-    // swapping the place of the img we cliked and the main img 
+    // swapping the place of the img we clicked and the main img 
     setMainImg((prev) => {
       e.target.src = prev;
       return nativeImg
